@@ -19,6 +19,11 @@ var accountPassword = program.password;
 var pingRate = program.pingRate || 1000;
 var exitOnError = program.exitOnError || true;
 
+if (typeof XMPPDomain === 'undefined' || typeof JID === 'undefined') {
+   program.help();
+   process.exit(1);
+}
+
 var client = new Client({
     jid: JID,
     password: accountPassword,
