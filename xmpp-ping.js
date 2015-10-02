@@ -1,4 +1,4 @@
-'use strict';
+#!/usr/bin/env node
 
 var uuid = require('uuid')
 var program = require('commander')
