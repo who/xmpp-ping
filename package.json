@@ -1,0 +1,17 @@
+{
+  "name": "xmpp-ping",
+  "version": "1.0.0",
+  "description": "An XMPP connection tester",
+  "main": "xmpp-ping.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew B",
+  "license": "NA",
+  "dependencies": {
+    "commander": "^2.8.1",
+    "ltx": "^1.0.0",
+    "node-xmpp-client": "^1.0.0-alpha23",
+    "uuid": "^2.0.1"
+  }
+}
