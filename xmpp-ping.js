@@ -26,10 +26,10 @@ var client = new Client({
 })
 
 client.on('online', function() {
-    console.log('Connection successfull. Begin pinging. Ping rate (ms) : '+pingRate);
+    console.log('Connection successfull. Will now begin pinging at a rate of 1 ping per '+pingRate+'ms');
     setInterval(function() {
         var pingStanza = new ltx.Element('iq', {
-                from: JID + '/xmppClientTest',
+                from: JID,
                 to: XMPPDomain,
                 type: "get",
                 id: uuid()
