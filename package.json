@@ -1,9 +1,12 @@
 {
   "name": "xmpp-ping",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An XMPP connection tester",
   "main": "xmpp-ping.js",
-  "bin": {"xmpp-ping":"./xmpp-ping.js"},
+  "bin": {
+    "xmpp-ping": "./xmpp-ping.js"
+  },
+  "repository": "https://github.com/who/xmpp-ping",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +15,7 @@
   "dependencies": {
     "commander": "^2.8.1",
     "ltx": "^1.0.0",
-    "node-xmpp-client": "^1.0.0-alpha23",
+    "node-xmpp-client": "1.0.0",
     "uuid": "^2.0.1"
   }
 }

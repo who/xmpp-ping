@@ -15,7 +15,7 @@ program
 
 var XMPPDomain = program.XMPPDomain;
 var JID = program.JID;
-var accountPassword = program.password;
+var accountPassword = program.password || "password";
 var pingRate = program.pingRate || 1000;
 var exitOnError = program.exitOnError || true;
 
@@ -27,7 +27,8 @@ if (typeof XMPPDomain === 'undefined' || typeof JID === 'undefined') {
 var client = new Client({
     jid: JID,
     password: accountPassword,
-    host: XMPPDomain
+    host: XMPPDomain,
+    preferred: 'PLAIN'
 })
 
 client.on('online', function() {
