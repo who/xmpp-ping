@@ -1,8 +1,9 @@
 {
   "name": "xmpp-ping",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An XMPP connection tester",
   "main": "xmpp-ping.js",
+  "bin": {"xmpp-ping":"./xmpp-ping.js"},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
