@@ -7,6 +7,7 @@ var ltx = require('ltx')
 
 program
     .option('-d, --XMPPDomain [value]', 'the XMPP domain to connect to')
+    .option('-t, --XMPPPort [value]', 'port of XMPP server')
     .option('-j, --JID [value]', 'JID of user to connect with')
     .option('-p, --password [value]', 'password of user user. defaults to "password"')
     .option('-r, --pingRate [value]', 'ms rate at which to ping the server. defaults to 1000')
@@ -14,6 +15,7 @@ program
     .parse(process.argv);
 
 var XMPPDomain = program.XMPPDomain;
+var XMPPPort = program.XMPPPort;
 var JID = program.JID;
 var accountPassword = program.password || "password";
 var pingRate = program.pingRate || 1000;
@@ -28,7 +30,8 @@ var client = new Client({
     jid: JID,
     password: accountPassword,
     host: XMPPDomain,
-    preferred: 'PLAIN'
+    preferred: 'PLAIN',
+    port: XMPPPort
 })
 
 client.on('online', function() {
